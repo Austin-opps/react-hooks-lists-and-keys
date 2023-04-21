@@ -8,10 +8,15 @@ function ColorList() {
     "darkslategray",
     "hotpink",
     "darkblue",
+    "mediumorchid",
   ];
 
   const colorElements = colors.map((color) => {
-    return <li style={{ color: color }}>{color}</li>;
+    return (
+    <li key={color} style={{ color: color }}>
+    {color}
+  </li>
+  )
   });
   return (
     <div>
@@ -24,23 +29,4 @@ function ColorList() {
   );
 }
 
-// function ColorItem(props) {
-//   return <li style={{ color: props.color }}>{props.color}</li>;
-// }
-
-// // ColorList component
-// function ColorList() {
-//   const colors = [
-//     "firebrick",
-//     "rebeccapurple",
-//     "salmon",
-//     "darkslategray",
-//     "hotpink",
-//   ];
-
-//   const colorElements = colors.map((color) => {
-//     return <ColorItem key={color} color={color} />;
-//   });
-//   // etc
-// }
 export default ColorList;
